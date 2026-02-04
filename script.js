@@ -27,7 +27,7 @@ let scale = 1;
 
 function startApp() {
     document.getElementById('overlay').style.display = 'none';
-    music.play();
+    music.play().catch(e => console.log("Music play failed:", e));
 }
 
 noBtn.addEventListener('click', () => {
@@ -40,15 +40,13 @@ noBtn.addEventListener('click', () => {
 });
 
 yesBtn.addEventListener('click', () => {
-    // When Yes is clicked, change the text and image
     document.getElementById('sub-text').innerHTML = "Yay!!! ❤️";
     bearImg.src = "https://media.tenor.com/gU_Pb_7p_5YAAAAj/mochi-mochi-peach-cat-cat.gif";
     document.querySelector('.button-wrapper').style.display = 'none';
     
-    // Move the "Yay" text to the center
     const textContainer = document.querySelector('.fixed-text');
     textContainer.style.right = '50%';
     textContainer.style.transform = 'translateX(50%)';
     textContainer.style.textAlign = 'center';
-    textContainer.style.top = '40px';
+    textContainer.style.top = '50px';
 });
