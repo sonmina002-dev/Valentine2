@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #bde0fe;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+#overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #bde0fe;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    width: 320px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.fixed-text {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    text-align: right;
+    pointer-events: none;
+    max-width: 150px; /* Keeps text from taking up too much width */
+}
+
+#sub-text { 
+    color: #555; 
+    margin: 0; 
+    font-size: 16px; 
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+#bear-img {
+    width: 160px;
+    align-self: center;
+    margin-top: 80px;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+button {
+    padding: 12px 0;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#yesBtn { 
+    background-color: #4CAF50; 
+    color: white; 
+    transition: 0.1s; 
+    z-index: 10;
+}
+
+#noBtn { 
+    background-color: #f44336; 
+    color: white;
+}
