@@ -4,22 +4,11 @@ const bearImg = document.getElementById('bear-img');
 const music = document.getElementById('song');
 
 const noTexts = [
-    "No", 
-    "Are you sure?", 
-    "What if I asked really nicely?", 
-    "Pretty please", 
-    "With a chocolate rice cake on top", 
-    "What about a matcha frostie", 
-    "PLEASE POOKIE", 
-    "But :(", 
-    "I am going to die", 
-    "Yep im dead", 
-    "ok ur talking to nathan's ghost", 
-    "please babe", 
-    ":((((", 
-    "PRETTY PLEASE", 
-    "Estoy muerto", 
-    "No :("
+    "No", "Are you sure?", "What if I asked really nicely?", "Pretty please", 
+    "With a chocolate rice cake on top", "What about a matcha frostie", 
+    "PLEASE POOKIE", "But :(", "I am going to die", "Yep im dead", 
+    "ok ur talking to nathan's ghost", "please babe", ":((((", 
+    "PRETTY PLEASE", "Estoy muerto", "No :("
 ];
 
 let noCount = 0;
@@ -27,6 +16,7 @@ let scale = 1;
 
 function startApp() {
     document.getElementById('overlay').style.display = 'none';
+    // This starts the song when they click "Open"
     music.play().catch(e => console.log("Music play failed:", e));
 }
 
@@ -43,10 +33,4 @@ yesBtn.addEventListener('click', () => {
     document.getElementById('sub-text').innerHTML = "Yay!!! ❤️";
     bearImg.src = "https://media.tenor.com/gU_Pb_7p_5YAAAAj/mochi-mochi-peach-cat-cat.gif";
     document.querySelector('.button-wrapper').style.display = 'none';
-    
-    const textContainer = document.querySelector('.fixed-text');
-    textContainer.style.right = '50%';
-    textContainer.style.transform = 'translateX(50%)';
-    textContainer.style.textAlign = 'center';
-    textContainer.style.top = '50px';
 });
